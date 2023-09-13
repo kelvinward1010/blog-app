@@ -1,0 +1,24 @@
+.darkmode{
+    width: 42px;
+    height: 24px;
+    border: 1.5px solid whitesmoke;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon{
+    font-size: 12px;
+}
+
+.ball{
+    height: 15px;
+    width: 15px;
+    background: teal;
+    border-radius: 50%;
+    position: absolute;
+}

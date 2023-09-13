@@ -1,0 +1,18 @@
+.iconFacebook, .iconLinkedIn{
+    color: rgb(29, 29, 161);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.iconSlack, .iconApple{
+    color: rgb(217, 42, 39);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
