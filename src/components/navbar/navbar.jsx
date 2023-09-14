@@ -12,23 +12,9 @@ import Link from 'next/link';
 import { Authlinks } from '../authLinks/authlinks';
 import DarkMode from '../darkmode/darkmode';
 import { ThemeContext } from '@/context/ThemeContext';
+import { LINKS } from '@/config/links';
 
 const { Title, Text } = Typography;
-
-const links = [
-    {
-        link: '/',
-        name: "Home",
-    },
-    {
-        link: '/',
-        name: "Contact",
-    },
-    {
-        link: '/',
-        name: "About",
-    },
-]
 
 export function Navbar() {
     const {mode} = useContext(ThemeContext);
@@ -45,17 +31,19 @@ export function Navbar() {
             <div className={styles.logo}>
                 <Title level={2} type="success">Kelvin Blog</Title>
             </div>
-            <div className={styles.links}>
-                <Space>
-                    <DarkMode />
-                    {links.map((item,idx) => (
-                        <Link href={item?.link} key={idx}>
-                            <Text className={'theme'} style={mode === "light" ? {color: "black"} : {color: "white"}}>{item?.name}</Text>
-                        </Link>
-                    ))}
-                    <Authlinks />
-                </Space>
-            </div>
+            <Space>
+                <DarkMode />
+                <div className={styles.links}>
+                    <Space>
+                        {LINKS.map((item,idx) => (
+                            <Link href={item?.link} key={idx}>
+                                <Text className={'theme'} style={mode === "light" ? {color: "black"} : {color: "white"}}>{item?.name}</Text>
+                            </Link>
+                        ))}
+                    </Space>
+                </div>
+                <Authlinks />
+            </Space>
         </div>
     )
 }

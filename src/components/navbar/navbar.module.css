@@ -15,4 +15,27 @@
     align-items: center;
     justify-content: space-between;
     height: 100px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1280px){
+    .logo{
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+
+    .social{
+        display: none;
+    }
+    .logo{
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 548px){
+    .links{
+        display: none;
+    }
 }

@@ -1,0 +1,79 @@
+.container{
+    margin-top: 30px;
+}
+.container h1{
+    font-size: 60px;
+}
+.post{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.imgContainer{
+    flex: 1;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.img{
+    object-fit: cover;
+}
+
+.contentPost{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contentPost h2{
+    font-size: 40px;
+}
+
+.contentPost h3{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.button{
+    padding: 5px 30px;
+    background: teal;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: chocolate;
+}
+
+
+@media screen and (max-width: 1280px){
+    .h1{
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .h1{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .h1{
+        font-size: 45px;
+    }
+
+    .imgContainer{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .h1{
+        font-size: 40px;
+    }
+}
