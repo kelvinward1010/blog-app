@@ -29,7 +29,9 @@ export function Navbar() {
                 </Space>
             </div>
             <div className={styles.logo}>
-                <Title level={2} type="success">Kelvin Blog</Title>
+                <Link href={'/'}>
+                    <Title level={2} type="success">Kelvin Blog</Title>
+                </Link>
             </div>
             <Space>
                 <DarkMode />

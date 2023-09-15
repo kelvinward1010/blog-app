@@ -1,0 +1,32 @@
+.categoryList{
+    margin-top: 35px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.categoryItem{
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.sports{
+    background: rgb(109, 109, 109);
+}
+
+.news{
+    background: rgb(253, 125, 125);
+}
+
+.arts{
+    background: rgb(122, 252, 148);
+}
+
+.computers{
+    background: rgb(124, 196, 255);
+}
+
+.phone{
+    background: rgb(253, 126, 223);
+}

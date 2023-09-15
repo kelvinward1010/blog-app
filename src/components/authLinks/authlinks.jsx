@@ -18,11 +18,11 @@ export function Authlinks() {
     const {mode} = useContext(ThemeContext);
     const [open, setOpen] = useState(false);
 
-    const status = "notauthenticated";
+    const status = "notauthenticate";
     return (
         <div>
             {status==="notauthenticated" ? (
-                <Link href={'/login'}>
+                <Link href={'/logout'}>
                     <LogoutOutlined className={styles.iconLogout}/>
                 </Link>
             ):(
@@ -30,7 +30,7 @@ export function Authlinks() {
                     <Link href={'/write'}>
                         <Text>Write</Text>
                     </Link>
-                    <Link href={'/logout'}>
+                    <Link href={'/login'}>
                         <LoginOutlined className={styles.iconLogin}/>
                     </Link>
                 </Space>
