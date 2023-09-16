@@ -77,3 +77,15 @@ a{
     max-width: 475px;
   }
 }
+
+.ql-container{
+  font-size: 28px;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  color: #4d4d4d;
+}
+
+.ql-tooltip-editor,.ql-tooltip{
+  display: none;
+}

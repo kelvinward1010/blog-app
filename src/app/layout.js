@@ -3,6 +3,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { Footer } from '@/components/footer/footer'
 import { ThemeProvider } from '@/context/ThemeContext'
+import { AuthProvider } from '@/context/AuthProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,15 +16,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning={true} suppressContentEditableWarning={true}>
       <body className={inter.className} suppressContentEditableWarning={true}>
-        <ThemeProvider>
-          <div className='container'>
-            <div className='wrapper'>
-              <Navbar/>
-                {children}
-              <Footer/>
+        <AuthProvider>
+          <ThemeProvider>
+            <div className='container'>
+              <div className='wrapper'>
+                <Navbar/>
+                  {children}
+                <Footer/>
+              </div>
             </div>
-          </div>
-        </ThemeProvider>
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   )

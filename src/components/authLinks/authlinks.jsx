@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { Space, Typography } from 'antd';
 import { ThemeContext } from '@/context/ThemeContext';
 import { LINKS } from '@/config/links';
+import { signOut, useSession } from 'next-auth/react';
 const { Text } = Typography;
 
 export function Authlinks() {
@@ -18,21 +19,23 @@ export function Authlinks() {
     const {mode} = useContext(ThemeContext);
     const [open, setOpen] = useState(false);
 
-    const status = "notauthenticate";
+    const {status} = useSession();
     return (
         <div>
-            {status==="notauthenticated" ? (
-                <Link href={'/logout'}>
-                    <LogoutOutlined className={styles.iconLogout}/>
+            {status==="unauthenticated" ? (
+                <Space>
+                <Link href={'/login'}>
+                    <LoginOutlined className={styles.iconLogin}/>
                 </Link>
+            </Space>
             ):(
                 <Space>
                     <Link href={'/write'}>
                         <Text>Write</Text>
                     </Link>
-                    <Link href={'/login'}>
-                        <LoginOutlined className={styles.iconLogin}/>
-                    </Link>
+                    <span onClick={signOut}>
+                        <LogoutOutlined className={styles.iconLogout}/>
+                    </span>
                 </Space>
             )} 
             {open && (

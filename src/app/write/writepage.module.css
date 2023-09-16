@@ -1,0 +1,52 @@
+.container{
+
+}
+
+.editor{
+    gap: 20px;
+}
+
+.buttonmain{
+    display: flex;
+    gap: 15px;
+}
+
+.button, .buttonadd{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.textArea{
+    width: 100%;
+}
+
+.input::placeholder{
+    color: gray;
+}
+
+.input{
+    padding: 50px;
+    font-size: 50px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.publish{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: teal;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}

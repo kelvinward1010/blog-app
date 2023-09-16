@@ -11,3 +11,8 @@
     color: white;
     cursor: pointer;
 }
+
+.button:disabled{
+    cursor: pointer;
+    background-color: rgb(252, 46, 46);
+}
