@@ -4,8 +4,8 @@ import { Panigation } from '../panigation/panigation';
 import Image from 'next/image';
 import { Card } from '../card/card';
 
-const getData = async (page) => {
-  const res = await fetch(`http://localhost:3000/api/posts?page=${page}`, {
+const getData = async (page,cat) => {
+  const res = await fetch(`http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`, {
     cache: "no-store",
   });
 
@@ -16,9 +16,9 @@ const getData = async (page) => {
   return res.json();
 };
 
-export const Cardlist = async ({page}) => {
+export const Cardlist = async ({page, cat}) => {
 
-  const {posts, count} = await getData(page);
+  const {posts, count} = await getData(page,cat);
 
   const POST_PER_PAGE = 2;
 

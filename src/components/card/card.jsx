@@ -7,9 +7,11 @@ import Link from 'next/link';
 export function Card({key, item}) {
   return (
     <div className={styles.container} key={key}>
-        {cate1 && (
+        {item?.img && (
             <div className={styles.imgContainer}>
-                <Image fill className={styles.img} src={cate1}  alt='' />
+                {item?.img && (
+                    <Image fill className={styles.img} src={item?.img}  alt='' />
+                )}
             </div>
         )}
         <div className={styles.textContainer}>

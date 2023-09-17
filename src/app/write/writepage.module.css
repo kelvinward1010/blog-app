@@ -1,5 +1,5 @@
 .container{
-
+    height: 70vh;
 }
 
 .editor{
@@ -49,4 +49,15 @@
     color: white;
     cursor: pointer;
     border-radius: 20px;
+}
+
+.select{
+    padding: 3px 10px;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.setuptitle{
+    display: flex;
+    flex-direction: column;
 }
